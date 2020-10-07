@@ -1,2 +1,2 @@
-# lut-course-assignment-three
+# exercise-one-lut
 Created with CodeSandbox
