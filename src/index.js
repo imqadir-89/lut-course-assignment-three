@@ -6,48 +6,46 @@ document.getElementById("board").innerHTML = `
 <h6><em>GAME RULES: </em> First player is <em>Player A</em>. Second Player is <em>Player B</em>. Player A gets the mark <em>"X"</em> and Player B gets the mark <em>"O"</em>.</h6>
 <h4 id="game_state"> To start the Game Click on a box in the game board</h4>
 <h4 id="game_timer"> Game Timer: </h4>
-<div id="progress-bar-container">
-  <div id="progress-bar"></div>
+<div id="progress-bar-container" class="progress">
+  <div id="progress-bar" class="determinate"></div>
 </div>
 <h5 id="game_result"></h5>
 <div>
-  <table>
-    <tr>
-      <td id="1"></td>
-      <td id="2"></td>
-      <td id="3"></td>
-      <td id="4"></td>
-      <td id="5"></td>
-    </tr>
-    <tr>
-      <td id="6"></td>
-      <td id="7"></td>
-      <td id="8"></td>
-      <td id="9"></td>
-      <td id="10"></td>
-    </tr>
-    <tr>
-      <td id="11"></td>
-      <td id="12"></td>
-      <td id="13"></td>
-      <td id="14"></td>
-      <td id="15"></td>
-    </tr>
-    <tr>
-      <td id="16"></td>
-      <td id="17"></td>
-      <td id="18"></td>
-      <td id="19"></td>
-      <td id="20"></td>
-    </tr>
-    <tr>
-      <td id="21"></td>
-      <td id="22"></td>
-      <td id="23"></td>
-      <td id="24"></td>
-      <td id="25"></td>
-    </tr>
-  </table>
+    <div class="row">
+      <div class="col s2" id="1"></div>
+      <div class="col s2" id="2"></div>
+      <div class="col s2" id="3"></div>
+      <div class="col s2" id="4"></div>
+      <div class="col s2" id="5"></div>
+    </div>
+    <div class="row">
+      <div class="col s2" id="6"></div>
+      <div class="col s2" id="7"></div>
+      <div class="col s2" id="8"></div>
+      <div class="col s2" id="9"></div>
+      <div class="col s2" id="10"></div>
+    </div>
+    <div class="row">
+      <div class="col s2" id="11"></div>
+      <div class="col s2" id="12"></div>
+      <div class="col s2" id="13"></div>
+      <div class="col s2" id="14"></div>
+      <div class="col s2" id="15"></div>
+    </div>
+    <div class="row">
+      <div class="col s2" id="16"></div>
+      <div class="col s2" id="17"></div>
+      <div class="col s2" id="18"></div>
+      <div class="col s2" id="19"></div>
+      <div class="col s2" id="20"></div>
+    </div>
+    <div class="row">
+      <div class="col s2" id="21"></div>
+      <div class="col s2" id="22"></div>
+      <div class="col s2" id="23"></div>
+      <div class="col s2" id="24"></div>
+      <div class="col s2" id="25"></div>
+    </div>
 </div>
 `;
 
@@ -58,17 +56,6 @@ var gameEnded = false;
 var gameTimer;
 
 setInterval(function () {}, 5000);
-
-/*
-function automaticGameStateChange(b) {
-	var intervalCount = 0;
-	var intervalChange = setInterval(function(){
-		console.log("boolean passed to interval " + b);
-		intervalCount++;
-		if(intervalCount === 1) clearInterval(intervalChange);
-	}, 10000);
-}
-*/
 
 for (i = 1; i < 26; i++) {
   document.getElementById(i).addEventListener("click", function () {
